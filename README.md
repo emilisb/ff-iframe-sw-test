@@ -1,4 +1,4 @@
-**Example demonstrating how a service worker in a cross-origin iframe cannot intercept network requests initiated by a web worker.**
+**Example demonstrating how a Mozilla Firefox service worker in a cross-origin iframe cannot intercept network requests initiated by a web worker.**
 
 ## Setup
 
