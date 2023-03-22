@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Iframe</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("./sw.js")
+          .then(function () {
+            const worker = new Worker("./worker.js", { name: "App Worker" });
+          })
+          .catch(function (error) {
+            console.error("Service worker registration failed: " + error);
+          });
+      } else {
+        console.error("Browser does not support service workers.");
+      }
+    </script>
+  </body>
+</html>
